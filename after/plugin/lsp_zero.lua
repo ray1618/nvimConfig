@@ -19,7 +19,7 @@ end)
 -- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 require('mason').setup({})
 require('mason-lspconfig').setup({
-	ensure_installed = {'tsserver', 'rust_analyzer', 'emmet_ls', 'eslint', 'angularls', 'tailwindcss'},
+	ensure_installed = {'tsserver', 'rust_analyzer', 'emmet_ls', 'eslint', 'angularls', 'tailwindcss', 'html'},
 	handlers = {
 		lsp_zero.default_setup,
 		lua_ls = function()
@@ -49,6 +49,7 @@ cmp.setup({
 		['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
 		['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
 		['<C-y>'] = cmp.mapping.confirm({ select = true }),
+		['<Tab>'] = cmp.mapping.confirm({ select = true }),
 		['<C-Space>'] = cmp.mapping.complete(),
 	}),
 })

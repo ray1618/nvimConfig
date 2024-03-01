@@ -10,3 +10,5 @@ vim.api.nvim_exec([[
     autocmd TextYankPost * lua vim.highlight.on_yank()
   augroup END
 ]], false)
+
+

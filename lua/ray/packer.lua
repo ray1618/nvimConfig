@@ -14,13 +14,16 @@ return require('packer').startup(function(use)
   }
 
   use ( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
-  use ( 'mbbill/undotree') 
+  use ( 'mbbill/undotree')
   use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
   use {
 	  "ThePrimeagen/harpoon",
 	  branch = "harpoon2",
 	  requires = { {"nvim-lua/plenary.nvim"} }
   }
+
+  -- git plugin
+  use ('tpope/vim-fugitive');
 
   -- LSP (language service provider )
   use {

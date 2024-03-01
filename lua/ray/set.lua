@@ -14,3 +14,7 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "80"
+
+-- show spaces
+-- vim.opt.list = true
+-- vim.opt.listchars = "space:·,tab:->\\"
