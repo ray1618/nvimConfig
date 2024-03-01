@@ -8,6 +8,9 @@ vim.keymap.set("n", "<leader>s",":w<CR>") -- save
 vim.keymap.set("n", "<M-s>",":w<CR>") -- save
 vim.keymap.set("n", "<leader>ls", ":ls<CR>") -- show list of buffers
 
+-- find en rename woord onder cursor door hele bestand
+vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
 -- paste delete zonder yank register
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
@@ -23,4 +26,3 @@ vim.keymap.set("v", "<leader>jk", "<Esc>")
 -- move selected line(s) up or down / or the lines where the cursor is atm 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv");
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv");
---vim.keymap.set("n", "<leader>Y", "\"+Y")
