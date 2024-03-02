@@ -13,7 +13,9 @@ vim.opt.shiftwidth = 4
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "150"
+
+-- set auto format on safe (if available in lsp)
 
 -- show spaces
 -- vim.opt.list = true
