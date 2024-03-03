@@ -22,8 +22,8 @@ return require('packer').startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } }
 	}
 
-	-- git plugin
-	use('tpope/vim-fugitive');
+	-- start cmd windows in vim (to start lazy git)
+	use 'voldikss/vim-floaterm'
 
 	-- LSP (language service provider )
 	use {
