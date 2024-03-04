@@ -15,7 +15,7 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.colorcolumn = "150"
 
--- set auto format on safe (if available in lsp)
+vim.opt.cursorline = true
 
 -- show spaces
 -- vim.opt.list = true
