@@ -1,6 +1,9 @@
+-- see https://github.com/nvim-treesitter/nvim-treesitter/wiki/Windows-support for more info for windows install
+require 'nvim-treesitter.install'.compilers = { vim.fn.getenv('CC'), "cc", "gcc", "clang", "cl", "zig" }
 require'nvim-treesitter.configs'.setup {
+  prefer_git = false,
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "javascript", "typescript", "c", "lua", "vim", "vimdoc", "query" },
+  ensure_installed = { "html", "angular", "javascript", "typescript", "lua", "vim", "vimdoc", "query" },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
