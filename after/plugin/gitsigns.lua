@@ -42,5 +42,8 @@ require('gitsigns').setup {
 	},
 }
 
--- leader blame to toggle gitblame (very poorly visible with current panda colors :) )
 vim.keymap.set("n", "<leader>bl", ":Gitsigns toggle_current_line_blame<CR>")
+
+-- change color of git default blame virutual text, as it's barely visible with my panda color theme
+vim.cmd('highlight link GitSignsCurrentLineBlame Visual')
+
