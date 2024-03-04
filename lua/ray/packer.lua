@@ -25,6 +25,9 @@ return require('packer').startup(function(use)
 	-- start cmd windows in vim (to start lazy git)
 	use 'voldikss/vim-floaterm'
 
+	-- git (show edited lines & blame)
+	use "lewis6991/gitsigns.nvim"
+
 	-- LSP (language service provider )
 	use {
 		'VonHeikemen/lsp-zero.nvim',
