@@ -27,8 +27,8 @@ return require('packer').startup(function(use)
 		requires = { { "nvim-lua/plenary.nvim" } }
 	}
 
-	-- start cmd windows in vim (to start lazy git)
-	use 'voldikss/vim-floaterm'
+	-- start cmd windows in vim (to start lazy git) (disabled does not work on bash in windows)
+    -- use 'voldikss/vim-floaterm'
 
 	-- git (show edited lines & blame)
 	use "lewis6991/gitsigns.nvim"
