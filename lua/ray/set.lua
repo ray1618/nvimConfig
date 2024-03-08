@@ -5,6 +5,8 @@ vim.opt.ignorecase = true
 vim.opt.showcmd = true
 vim.opt.title = true
 vim.opt.showmode = true
+vim.opt.clipboard = "unnamedplus"
+
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
