@@ -3,7 +3,7 @@ require 'nvim-treesitter.install'.compilers = { vim.fn.getenv('CC'), "cc", "gcc"
 require'nvim-treesitter.configs'.setup {
   prefer_git = false,
   -- A list of parser names, or "all" (the five listed parsers should always be installed)
-  ensure_installed = { "html", "angular", "javascript", "typescript", "lua", "vim", "vimdoc", "query" },
+  ensure_installed = { "html", "angular", "javascript", "typescript", "lua"  },
 
   -- Install parsers synchronously (only applied to `ensure_installed`)
   sync_install = false,
