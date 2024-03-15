@@ -13,13 +13,21 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { { 'nvim-lua/plenary.nvim' } }
 	}
+
+	-- fuzzy finding
 	use {
 		"nvim-telescope/telescope-file-browser.nvim",
 		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
 	}
+	-- ui for returned lists in vim ( code actions result)
+	use {'nvim-telescope/telescope-ui-select.nvim' }
 
+	--	 code anylising / syntax highlighting
 	use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+
+	-- undotree, keeps local chages to undo
 	use('mbbill/undotree')
+
 	use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
 	use {
 		"ThePrimeagen/harpoon",
