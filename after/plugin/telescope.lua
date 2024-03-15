@@ -10,7 +10,13 @@ end)
 vim.keymap.set('n', '<Leader>ff', ':Telescope file_browser<CR>', { noremap = true, silent = true })
 
 -- filebrowser
-require("telescope").setup()
+require("telescope").setup {
+  extensions = {
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown { }
+    }
+  }
+}
 require("telescope").load_extension "file_browser"
 
 vim.api.nvim_set_keymap(
@@ -27,3 +33,8 @@ vim.api.nvim_set_keymap(
   ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
   { noremap = true }
 )
+
+-- To get ui-select loaded and working with telescope, you need to call
+-- load_extension, somewhere after setup function:
+require("telescope").load_extension("ui-select")
+
