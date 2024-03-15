@@ -1,6 +1,6 @@
 -- floaterm new (make sure lazy git is installed on the system)
 vim.keymap.set("n", "<leader>git", ":FloatermNew lazygit<CR>")
-vim.keymap.set("n", "<leader>g", ":FloatermNew lazygit<CR>")
+vim.keymap.set("n", "<leader>lz", ":FloatermNew lazygit<CR>")
 
 -- floaterm toggle
 vim.keymap.set("n", "<leader>ft", ":FloatermToggle<CR>")

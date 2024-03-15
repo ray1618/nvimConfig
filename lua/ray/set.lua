@@ -5,7 +5,7 @@ vim.opt.ignorecase = true
 vim.opt.showcmd = true
 vim.opt.title = true
 vim.opt.showmode = true
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamedplus" -- copy yanks to system clipboard
 
 
 vim.opt.tabstop = 4
