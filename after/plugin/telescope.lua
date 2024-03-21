@@ -1,24 +1,24 @@
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>fa', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>pa', function()
-    builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
-
+vim.keymap.set('n', '<leader>fa', builtin.find_files, {}) -- find files in project
+vim.keymap.set('n', '<C-p>', builtin.git_files, {}) -- find files in git
+-- grep (find string in file)
+-- don't forget to install ripgrep for this (choco install ripgrep / brew install ripgrep)
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 
 -- Sneltoets toewijzen aan Telescope file_browser
 vim.keymap.set('n', '<Leader>ff', ':Telescope file_browser<CR>', { noremap = true, silent = true })
 
 -- filebrowser
 require("telescope").setup {
-  extensions = {
-    ["ui-select"] = {
-      require("telescope.themes").get_dropdown { }
-    }
-  }
+	extensions = {
+		["ui-select"] = {
+			require("telescope.themes").get_dropdown { }
+		}
+	}
 }
 require("telescope").load_extension "file_browser"
 
+ 
 vim.api.nvim_set_keymap(
   "n",
   "<space>fb",
