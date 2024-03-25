@@ -114,6 +114,16 @@ _G.packer_plugins = {
     path = "/Users/ray/.local/share/nvim/site/pack/packer/start/neoformat",
     url = "https://github.com/sbdchd/neoformat"
   },
+  nerdtree = {
+    loaded = true,
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
+  },
+  ["nerdtree-git-plugin"] = {
+    loaded = true,
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
+    url = "https://github.com/Xuyuanp/nerdtree-git-plugin"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/ray/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -163,6 +173,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ray/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "/Users/ray/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["vim-floaterm"] = {
     loaded = true,

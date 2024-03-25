@@ -27,6 +27,11 @@ return require('packer').startup(function(use)
 
 	-- undotree, keeps local chages to undo
 	use('mbbill/undotree')
+	
+	-- file explorer
+	use('preservim/nerdtree')
+	use('Xuyuanp/nerdtree-git-plugin')
+	use('ryanoasis/vim-devicons')
 
 	use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
 	use {
