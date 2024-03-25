@@ -7,6 +7,8 @@ vim.keymap.set("n", "<leader>ma", ":Mason") -- lsp's install
 vim.keymap.set("n", "<leader>s",":w<CR>") -- save
 vim.keymap.set("n", "<M-s>",":w<CR>") -- save
 vim.keymap.set("n", "<leader>ls", ":ls<CR>") -- show list of buffers
+vim.keymap.set("n", "<leader>n", ":NERDTreeFocus<CR>");
+vim.keymap.set("n", "<C-e>", ":NERDTreeToggle<CR>");
 
 -- find en rename woord onder cursor door hele bestand
 vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
