@@ -23,8 +23,8 @@ vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>dd", "\"_dd")
 
 -- jk escape with just kidding :) 
-vim.keymap.set("i", "jk", "<Esc>") -- exit on jk (not sure if this is a good idea in dutch ~_~
-vim.keymap.set("v", "<leader>jk", "<Esc>")
+vim.keymap.set("i", "kj", "<Esc>") -- exit on jk (not sure if this is a good idea in dutch ~_~
+vim.keymap.set("v", "<leader>kj", "<Esc>")
 
 -- move selected line(s) up or down / or the lines where the cursor is atm 
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv");
