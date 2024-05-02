@@ -22,6 +22,8 @@ vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>dd", "\"_dd")
 
+vim.keymap.set("n", "<Esc>", "<Esc>:nohl<Cr>")
+
 -- jk escape with just kidding :) 
 vim.keymap.set("i", "kj", "<Esc>") -- exit on jk (not sure if this is a good idea in dutch ~_~
 vim.keymap.set("v", "<leader>kj", "<Esc>")

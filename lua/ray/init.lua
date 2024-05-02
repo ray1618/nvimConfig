@@ -2,6 +2,7 @@ require('ray/set')
 require('ray/remap')
 require('ray/packer')
 
+vim.o.hlsearch = true
 vim.highlight.on_yank()
 vim.cmd('colorscheme panda')
 vim.api.nvim_exec([[
