@@ -21,6 +21,7 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>dd", "\"_dd")
+vim.keymap.set("n", "<leader>r", "\"_ciw<Esc>p")
 
 vim.keymap.set("n", "<Esc>", "<Esc>:nohl<Cr>")
 
