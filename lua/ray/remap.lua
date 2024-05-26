@@ -17,10 +17,10 @@ vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 -- paste delete zonder yank register
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
--- yank van cursort to eind / begin line
-vim.keymap.set("n", "<leader>d", "\"_d")
+-- delete selection without using register
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("n", "<leader>dd", "\"_dd")
+-- replace current selection zonder gedelete text in register te zetten.
 vim.keymap.set("n", "<leader>r", "\"_ciw<Esc>p")
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
