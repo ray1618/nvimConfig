@@ -18,10 +18,9 @@ require("telescope").setup {
 }
 require("telescope").load_extension "file_browser"
 
- 
 vim.api.nvim_set_keymap(
   "n",
-  "<space>fb",
+  "<leader>fb",
   ":Telescope file_browser<CR>",
   { noremap = true }
 )
@@ -33,6 +32,9 @@ vim.api.nvim_set_keymap(
   ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
   { noremap = true }
 )
+
+-- show a list of current open files in buffer to replace harpoon
+vim.api.nvim_set_keymap('n', '<leader>ls', [[<cmd>lua require('telescope.builtin').buffers()<CR>]], { noremap = true, silent = true })
 
 -- To get ui-select loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:

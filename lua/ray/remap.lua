@@ -2,14 +2,16 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv",":Ex<CR>") -- exit file
 vim.keymap.set("n", "<leader>qq",":q<CR>") -- quit
 vim.keymap.set("n", "<leader>ps",":PackerSync") -- install plugin with packersync
-vim.keymap.set("n", "<leader>lsp",":LspInstall") -- install lsp (language service protocal) with lsp-zero 
+vim.keymap.set("n", "<leader>lp",":LspInstall") -- install lsp (language service protocal) with lsp-zero 
 vim.keymap.set("n", "<leader>ma", ":Mason") -- lsp's install 
 vim.keymap.set("n", "<leader>s",":w<CR>") -- save
 vim.keymap.set("n", "<M-s>",":w<CR>") -- save
-vim.keymap.set("n", "<leader>ls", ":ls<CR>") -- show list of buffers
 vim.keymap.set("n", "<leader>n", ":NERDTreeFocus<CR>");
 vim.keymap.set("n", "<C-e>", ":NERDTreeToggle<CR>");
 vim.keymap.set("n", "<C-f>", ":NERDTreeFind<CR>");
+
+-- gebruik telescope op het moment (zie telescope)
+--vim.keymap.set("n", "<leader>ls", ":ls<CR>") -- show list of buffers
 
 -- find en rename woord onder cursor door hele bestand
 vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
@@ -47,3 +49,9 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- buffer
+
+-- Toggle (b)revious? & next buffers 
+vim.keymap.set('n', '<C-b>', ':bnext<CR>')
+vim.keymap.set('n', '<C-n>', ':bprev<CR>')
