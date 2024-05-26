@@ -34,11 +34,13 @@ return require('packer').startup(function(use)
 	use('ryanoasis/vim-devicons')
 
 	use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
-	use {
-		"ThePrimeagen/harpoon",
-		branch = "harpoon2",
-		requires = { { "nvim-lua/plenary.nvim" } }
-	}
+
+--	disalbed harpoon for now
+--	use {
+--		"ThePrimeagen/harpoon",
+--		branch = "harpoon2",
+--		requires = { { "nvim-lua/plenary.nvim" } }
+--	}
 
 	-- start cmd windows in vim (to start lazy git)
 	use 'voldikss/vim-floaterm'
