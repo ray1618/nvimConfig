@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv",":Ex<CR>") -- exit file
 vim.keymap.set("n", "<leader>qq",":q<CR>") -- quit
-vim.keymap.set("n", "<leader>ps",":PackerSync") -- install plugin with packersync
+vim.keymap.set("n", "<leader>lz",":Lazy<CR>") -- open lazy
 vim.keymap.set("n", "<leader>lp",":LspInstall") -- install lsp (language service protocal) with lsp-zero 
 vim.keymap.set("n", "<leader>ma", ":Mason") -- lsp's install 
 vim.keymap.set("n", "<leader>s",":w<CR>") -- save
