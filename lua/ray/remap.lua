@@ -36,8 +36,8 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv");
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv");
 
 -- split window with current file (horizontal / vertical)
-vim.keymap.set('n', '<C-s>', ':split<CR>');
-vim.keymap.set('n', '<C-v>', ':vsplit<CR>');
+vim.keymap.set('n', '<C-h>', ':split<CR>');
+vim.keymap.set('n', '<C-s>', ':vsplit<CR>');
 -- close split window
 vim.keymap.set('n', '<C-q>', ':close<CR>');
 
