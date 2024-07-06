@@ -85,15 +85,90 @@ require("lazy").setup({
      end,
    },
 
- -- LSP (language server
-  { 'williamboman/mason.nvim', lazy = true},
-  {'williamboman/mason-lspconfig.nvim', lazy = true},
-  {'VonHeikemen/lsp-zero.nvim', lazy = true, branch = 'v3.x'},
-  { 'neovim/nvim-lspconfig',lazy = true },
+ -- LSP (language server NO CONFIG
+--  'williamboman/mason.nvim',
+--  'williamboman/mason-lspconfig.nvim',
+--  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+--  'neovim/nvim-lspconfig',
   -- Autocompletion
-  {'hrsh7th/nvim-cmp', lazy = true},
-  {'hrsh7th/cmp-nvim-lsp', lazy = true},
-  {'L3MON4D3/LuaSnip', lazy = true},
-  {'mfussenegger/nvim-lint', lazy = true},
- -- 'sbdchd/neoformat',
+--  'hrsh7th/nvim-cmp',
+--  'hrsh7th/cmp-nvim-lsp',
+--  'L3MON4D3/LuaSnip',
+--  'mfussenegger/nvim-lint',
+-- 'sbdchd/neoformat',
+
+  -- LSP (language server) Lazy configured
+    {
+        'williamboman/mason.nvim',
+        event = 'BufReadPre',
+        config = function()
+            require('mason').setup()
+        end
+    },
+    {
+        'williamboman/mason-lspconfig.nvim',
+        after = 'mason.nvim',
+        config = function()
+            require('mason-lspconfig').setup()
+        end
+    },
+    {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        after = 'mason-lspconfig.nvim',
+        config = function()
+            local lsp = require('lsp-zero')
+            lsp.preset('recommended')
+            lsp.setup()
+        end
+    },
+    {
+        'neovim/nvim-lspconfig',
+        after = 'lsp-zero.nvim',
+    },
+
+    -- Autocompletion
+    {
+        'hrsh7th/nvim-cmp',
+        event = 'InsertEnter',
+        config = function()
+            local cmp = require('cmp')
+            cmp.setup({
+                mapping = {
+                    ['<Tab>'] = cmp.mapping.select_next_item(),
+                    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+                    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                },
+                sources = cmp.config.sources({
+                    { name = 'nvim_lsp' },
+                }),
+            })
+        end
+    },
+    {
+        'hrsh7th/cmp-nvim-lsp',
+        after = 'nvim-cmp',
+    },
+    {
+        'L3MON4D3/LuaSnip',
+        after = 'nvim-cmp',
+    },
+
+    -- Linting
+    {
+        'mfussenegger/nvim-lint',
+        event = {'BufWritePost', 'BufReadPre'},
+        config = function()
+            require('lint').linters_by_ft = {
+                python = {'flake8'},
+                lua = {'luacheck'},
+                -- Voeg meer linters toe per bestandstype
+            }
+            vim.api.nvim_create_autocmd({'BufWritePost', 'BufReadPre'}, {
+                callback = function()
+                    require('lint').try_lint()
+                end,
+            })
+        end
+    },
 })
