@@ -32,24 +32,24 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- install teleschope (fuzzy finding)
      {
-     'nvim-telescope/telescope.nvim', tag = '0.1.6',
+     'nvim-telescope/telescope.nvim', lazy = true, tag = '0.1.6',
  -- or                              , branch = '0.1.x',
        dependencies = { 'nvim-lua/plenary.nvim' }
      },
- 	'nvim-telescope/telescope-ui-select.nvim',
- 	'nvim-telescope/telescope-file-browser.nvim',
- 	'nvim-treesitter/nvim-treesitter',
+	 {'nvim-telescope/telescope-ui-select.nvim', lazy = true},
+	 {'nvim-telescope/telescope-file-browser.nvim', lazy = true},
+	 {'nvim-treesitter/nvim-treesitter', lazy = true},
 --
 	--undotree, keeps local chages to undo
-	'mbbill/undotree',
+	{'mbbill/undotree', lazy = true},
 --
  	-- file explorer
- 	'preservim/nerdtree',
- 	'Xuyuanp/nerdtree-git-plugin',
- 	'ryanoasis/vim-devicons',
+	'preservim/nerdtree',
+	'Xuyuanp/nerdtree-git-plugin',
+	'ryanoasis/vim-devicons',
 --
 --   -- "gc" to comment visual regions/lines
-   {'numToStr/Comment.nvim', opts = {}},
+   {'numToStr/Comment.nvim', opts = {lazy = true}},
     { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
@@ -88,12 +88,12 @@ require("lazy").setup({
  -- LSP (language server
   { 'williamboman/mason.nvim', lazy = true},
   {'williamboman/mason-lspconfig.nvim', lazy = true},
-  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
+  {'VonHeikemen/lsp-zero.nvim', lazy = true, branch = 'v3.x'},
   { 'neovim/nvim-lspconfig',lazy = true },
   -- Autocompletion
-  {'hrsh7th/nvim-cmp'},
-  {'hrsh7th/cmp-nvim-lsp'},
-  {'L3MON4D3/LuaSnip'},
-  {'mfussenegger/nvim-lint'},
+  {'hrsh7th/nvim-cmp', lazy = true},
+  {'hrsh7th/cmp-nvim-lsp', lazy = true},
+  {'L3MON4D3/LuaSnip', lazy = true},
+  {'mfussenegger/nvim-lint', lazy = true},
  -- 'sbdchd/neoformat',
 })
