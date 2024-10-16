@@ -14,7 +14,7 @@ vim.opt.shiftwidth = 4
 
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 4
 vim.opt.colorcolumn = "150"
 
 vim.opt.cursorline = true
