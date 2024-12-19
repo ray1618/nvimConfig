@@ -19,10 +19,6 @@ vim.opt.colorcolumn = "150"
 
 vim.opt.cursorline = true
 
--- add yank register to system clipboard
-vim.opt.clipboard = 'unnamedplus'
-
-
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'` 
 --  and `:help 'listchars'`
