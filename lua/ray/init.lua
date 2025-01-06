@@ -91,12 +91,12 @@ require("lazy").setup({
 --  {'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
 --  'neovim/nvim-lspconfig',
   -- Autocompletion
---  'hrsh7th/nvim-cmp',
---  'hrsh7th/cmp-nvim-lsp',
+--    'hrsh7th/nvim-cmp',
+--	'hrsh7th/cmp-nvim-lsp',
 --  'L3MON4D3/LuaSnip',
---  'mfussenegger/nvim-lint',
--- 'sbdchd/neoformat',
-
+--    'mfussenegger/nvim-lint',
+--	'sbdchd/neoformat',
+    "dense-analysis/ale",
   -- LSP (language server) Lazy configured
     {
         'williamboman/mason.nvim',
