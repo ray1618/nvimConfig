@@ -27,8 +27,8 @@ vim.keymap.set("n", "<leader>r", "\"_ciw<Esc>p")
 
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
--- jk escape with just kidding :) 
-vim.keymap.set("i", "qw", "<Esc>") -- exit on jk (not sure if this is a good idea in dutch ~_~
+-- jk escape with qw and stop recording
+vim.keymap.set("i", "qw", "<Esc>q") -- exit on jk (not sure if this is a good idea in dutch ~_~
 vim.keymap.set("v", "<leader>kj", "<Esc>")
 
 -- move selected line(s) up or down / or the lines where the cursor is atm 
