@@ -55,3 +55,5 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Toggle (b)revious? & next buffers 
 vim.keymap.set('n', '<C-b>', ':bnext<CR>')
 vim.keymap.set('n', '<C-n>', ':bprev<CR>')
+
+vim.keymap.set('n', '<C-a>', 'ggVG$');

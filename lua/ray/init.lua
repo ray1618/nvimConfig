@@ -36,6 +36,7 @@ require("lazy").setup({
  -- or                              , branch = '0.1.x',
        dependencies = { 'nvim-lua/plenary.nvim' }
      },
+	 {'justinmk/vim-sneak'},
 	 {'nvim-telescope/telescope-ui-select.nvim', lazy = true},
 	 {'nvim-telescope/telescope-file-browser.nvim', lazy = true},
 	 {'nvim-treesitter/nvim-treesitter', lazy = true},
