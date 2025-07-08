@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
 	use('preservim/nerdtree')
 	use('Xuyuanp/nerdtree-git-plugin')
 	use('ryanoasis/vim-devicons')
+  use("tpope/vim-commentary")
 
 	use "nvim-lua/plenary.nvim" -- don't forget to add this one if you don't have it yet!
 
@@ -49,23 +50,5 @@ return require('packer').startup(function(use)
 	use "lewis6991/gitsigns.nvim"
 
 	-- LSP (language service provider )
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		requires = {
-			--- Uncomment the two plugins below if you want to manage the language servers from neovim
-			--- https://github.com/williamboman/mason.nvim?tab=readme-ov-file
-			{ 'williamboman/mason.nvim' },
-			{ 'williamboman/mason-lspconfig.nvim' },
-
-			-- LSP Support
-			{ 'neovim/nvim-lspconfig' },
-			-- Autocompletion
-			{ 'hrsh7th/nvim-cmp' },
-			{ 'hrsh7th/cmp-nvim-lsp' },
-			{ 'L3MON4D3/LuaSnip' },
-			{ 'mfussenegger/nvim-lint' }
-		}
-	}
 	use { 'sbdchd/neoformat' }
 end)
