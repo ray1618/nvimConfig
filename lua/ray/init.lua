@@ -40,6 +40,7 @@ require("lazy").setup({
 	 {'nvim-telescope/telescope-ui-select.nvim', lazy = true},
 	 {'nvim-telescope/telescope-file-browser.nvim', lazy = true},
 	 {'nvim-treesitter/nvim-treesitter', lazy = true},
+	 {'tpope/vim-surround'},
 --
 	--undotree, keeps local chages to undo
 	{'mbbill/undotree', lazy = true},
