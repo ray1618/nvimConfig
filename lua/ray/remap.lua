@@ -57,3 +57,5 @@ vim.keymap.set('n', '<C-b>', ':bnext<CR>')
 vim.keymap.set('n', '<C-n>', ':bprev<CR>')
 
 vim.keymap.set('n', '<C-a>', 'ggVG$');
+
+vim.keymap.set('n', '<leader>ls', ':Telescope buffers');
