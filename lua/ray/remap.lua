@@ -20,8 +20,26 @@ vim.keymap.set("n", "<leader>fr", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left>
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
 -- delete selection without using register
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("n", "<leader>dd", "\"_dd")
+-- user register with leader
+vim.keymap.set("n", "d", "\"_d")
+vim.keymap.set("n", "dd", "\"_dd")
+vim.keymap.set("n", "<leader>d", "d")
+vim.keymap.set("n", "<leader>dd", "dd")
+vim.keymap.set("v", "d", "\"_d")
+vim.keymap.set("v", "dd", "\"_dd")
+vim.keymap.set("v", "<leader>d", "d")
+vim.keymap.set("v", "<leader>dd", "dd")
+
+vim.keymap.set("n", "c", "\"_c")
+vim.keymap.set("n", "<leader>c", "c")
+vim.keymap.set("v", "c", "\"_c")
+vim.keymap.set("v", "<leader>c", "c")
+
+vim.keymap.set("n", "x", "\"_x")
+vim.keymap.set("n", "<leader>x", "x")
+vim.keymap.set("v", "x", "\"_x")
+vim.keymap.set("v", "<leader>x", "x")
+
 -- replace current selection zonder gedelete text in register te zetten.
 vim.keymap.set("n", "<leader>r", "\"_ciw<Esc>p")
 
