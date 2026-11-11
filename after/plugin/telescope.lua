@@ -15,6 +15,7 @@ vim.keymap.set('n', '<C-p>', builtin.git_files, {}) -- find files in git
 -- grep (find string in file)
 -- don't forget to install ripgrep for this (choco install ripgrep / brew install ripgrep)
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>ft', builtin.live_grep, {})
 
 -- Sneltoets toewijzen aan Telescope file_browser
 vim.keymap.set('n', '<Leader>ff', ':Telescope file_browser<CR>', { noremap = true, silent = true })
